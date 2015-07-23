@@ -13,6 +13,7 @@ import java.util.HashSet;
 public abstract class SupportSystem implements PropertyChangeListener
 {
     private Responder responder;
+    private static SupportSystem instance;
     
     public SupportSystem()
     {

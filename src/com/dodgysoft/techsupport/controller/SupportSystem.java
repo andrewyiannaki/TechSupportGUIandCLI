@@ -36,7 +36,7 @@ public abstract class SupportSystem implements PropertyChangeListener
     protected void printWelcome()
     {
         println("Welcome to the DodgySoft Technical Support System.");
-        println();
+        println("");
         println("Please tell us about your problem.");
         println("We will assist you with any problem you might have.");
         println("Please type 'bye' to exit our system.");
@@ -62,7 +62,6 @@ public abstract class SupportSystem implements PropertyChangeListener
     /**
      * Helper method to print/show an empty new line.
      */
-    protected void println()
     {
         println("");
     }

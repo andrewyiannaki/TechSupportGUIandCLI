@@ -1,5 +1,6 @@
 package com.dodgysoft.techsupport.gui.controller;
 
+import com.dodgysoft.techsupport.cli.SupportSystemCLIController;
 import com.dodgysoft.techsupport.controller.InputHandler;
 import com.dodgysoft.techsupport.controller.SupportSystem;
 import com.dodgysoft.techsupport.gui.view.SupportSystemUI;
@@ -14,8 +15,16 @@ public class SupportSystemGUIController extends SupportSystem
     private SupportSystemUI ui;
     private UIController uiControl;
     private InputHandler handler;
+    
+    //a private static field that hold the ONLY instance of this class
+    private static SupportSystemGUIController instance;
 
-    public SupportSystemGUIController()
+    /**
+     * Creates the SupportSystem GUI and GUI controller.
+     * 
+     * the constructor is private to fit the singleton design pattern
+     */
+    private SupportSystemGUIController()
     {
         super();
         ui = new SupportSystemUI();
@@ -26,6 +35,22 @@ public class SupportSystemGUIController extends SupportSystem
         handler = new InputHandler();
         uiControl.addPropertyChangeListener(handler);
         handler.addPropertyChangeListener(this);
+    }
+    
+    /**
+     * getInstance() Gets an instance of this class. Requirement of the Singleton
+     * design pattern
+     * 
+     * @return An instance of SupportSystemGUIController
+     */
+    public static SupportSystemGUIController getInstance()
+    {
+        if (instance == null)
+        {
+            instance = new SupportSystemGUIController();
+        }
+        
+        return instance;
     }
 
     @Override

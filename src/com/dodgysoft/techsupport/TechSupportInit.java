@@ -22,7 +22,8 @@ public class TechSupportInit {
             if("--cli".equals(args[0]))
             {
                 //start the CLI
-                new SupportSystemCLIController().start();
+                //new SupportSystemCLIController().start();
+                SupportSystemCLIController.getInstance().start();
             }
             else if("--help".equals(args[0]))
             {
@@ -40,7 +41,7 @@ public class TechSupportInit {
         else
         {
             //start the GUI
-            new SupportSystemGUIController().start();
+            SupportSystemGUIController.getInstance().start();
         }
     }
 }

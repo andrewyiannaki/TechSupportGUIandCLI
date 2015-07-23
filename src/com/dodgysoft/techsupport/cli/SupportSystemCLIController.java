@@ -22,18 +22,39 @@ public class SupportSystemCLIController extends SupportSystem
 
     private InputReader reader;
     private InputHandler handler;
+    
+    //a private static field that hold the ONLY instance of this class
+    private static SupportSystemCLIController instance;
 
     /**
      * Creates the InputReader and InputHandler objects and plugs the InputHandler
      * to listen to InputReader messages.
+     * 
+     * the constructor is private to fit the singleton design pattern
      */
-    public SupportSystemCLIController()
+    private SupportSystemCLIController()
     {
         super();
         reader = new InputReader();
         handler = new InputHandler();
         reader.addPropertyChangeListener(handler);
         handler.addPropertyChangeListener(this);
+    }
+    
+    /**
+     * getInstance() Gets an instance of this class. Requirement of the Singleton
+     * design patter
+     * 
+     * @return An instance of SupportSystemCLIController
+     */
+    public static SupportSystemCLIController getInstance()
+    {
+        if (instance == null)
+        {
+            instance = new SupportSystemCLIController();
+        }
+        
+        return instance;
     }
 
     /**

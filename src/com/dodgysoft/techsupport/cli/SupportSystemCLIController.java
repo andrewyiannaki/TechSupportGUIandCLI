@@ -3,6 +3,7 @@ package com.dodgysoft.techsupport.cli;
 import com.dodgysoft.techsupport.cli.view.InputReader;
 import com.dodgysoft.techsupport.controller.InputHandler;
 import com.dodgysoft.techsupport.controller.SupportSystem;
+import com.dodgysoft.techsupport.factory.ui.UIFactory;
 
 /**
  * This class implements the controller of the CLI (Command Line Interface) 
@@ -35,7 +36,8 @@ public class SupportSystemCLIController extends SupportSystem
     private SupportSystemCLIController()
     {
         super();
-        reader = new InputReader();
+        //reader = new InputReader();
+        reader = UIFactory.getInputReader();
         handler = new InputHandler();
         reader.addPropertyChangeListener(handler);
         handler.addPropertyChangeListener(this);

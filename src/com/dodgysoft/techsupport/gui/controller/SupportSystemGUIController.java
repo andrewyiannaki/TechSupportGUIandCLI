@@ -4,6 +4,7 @@ import com.dodgysoft.techsupport.cli.SupportSystemCLIController;
 import com.dodgysoft.techsupport.controller.InputHandler;
 import com.dodgysoft.techsupport.controller.SupportSystem;
 import com.dodgysoft.techsupport.gui.view.SupportSystemUI;
+import com.dodgysoft.techsupport.factory.ui.*;
 
 /**
  *
@@ -24,10 +25,12 @@ public class SupportSystemGUIController extends SupportSystem
      * 
      * the constructor is private to fit the singleton design pattern
      */
+    
     private SupportSystemGUIController()
     {
         super();
         ui = new SupportSystemUI();
+        //ui = UIFactory.getSupportSystemUI();
         uiControl = new UIController(ui);
         ui.addBtnSendActionListener(uiControl);
         ui.addTxtInputKeyListener(uiControl);

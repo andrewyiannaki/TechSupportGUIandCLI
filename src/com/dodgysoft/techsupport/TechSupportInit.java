@@ -42,6 +42,7 @@ public class TechSupportInit {
         {
             //start the GUI
             SupportSystemGUIController.getInstance().start();
+            //new SupportSystemGUIController().start();
         }
     }
 }

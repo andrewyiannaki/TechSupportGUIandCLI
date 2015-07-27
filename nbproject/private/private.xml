@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/H:/Documents/Introduction%20to%20Object%20Oriented%20Programming%20in%20Java%202/NetBeans/TechSupportGUIandCLI/src/com/dodgysoft/techsupport/TechSupportInit.java</file>
+            <file>file:/H:/Documents/Introduction%20to%20Object%20Oriented%20Programming%20in%20Java%202/NetBeans/TechSupportGUIandCLI/src/com/dodgysoft/techsupport/cli/SupportSystemCLIController.java</file>
+            <file>file:/H:/Documents/Introduction%20to%20Object%20Oriented%20Programming%20in%20Java%202/NetBeans/TechSupportGUIandCLI/src/com/dodgysoft/techsupport/controller/InputHandler.java</file>
+            <file>file:/H:/Documents/Introduction%20to%20Object%20Oriented%20Programming%20in%20Java%202/NetBeans/TechSupportGUIandCLI/src/com/dodgysoft/techsupport/controller/SupportSystem.java</file>
+            <file>file:/H:/Documents/Introduction%20to%20Object%20Oriented%20Programming%20in%20Java%202/NetBeans/TechSupportGUIandCLI/src/com/dodgysoft/techsupport/model/AppConstants.java</file>
+            <file>file:/H:/Documents/Introduction%20to%20Object%20Oriented%20Programming%20in%20Java%202/NetBeans/TechSupportGUIandCLI/src/com/dodgysoft/techsupport/factory/ui/UIFactory.java</file>
+            <file>file:/H:/Documents/Introduction%20to%20Object%20Oriented%20Programming%20in%20Java%202/NetBeans/TechSupportGUIandCLI/src/com/dodgysoft/techsupport/gui/controller/SupportSystemGUIController.java</file>
+        </group>
+    </open-files>
 </project-private>

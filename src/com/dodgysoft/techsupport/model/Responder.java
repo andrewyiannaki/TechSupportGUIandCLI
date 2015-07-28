@@ -3,6 +3,8 @@ package com.dodgysoft.techsupport.model;
 import java.io.*;
 import java.util.*;
 
+import com.dodgysoft.techsupport.factory.responses.ResponsesFactory;
+
 /**
  * The responder class represents a response generator object.
  * It is used to generate an automatic response, based on specified input.
@@ -35,10 +37,15 @@ public class Responder
      */
     public Responder()
     {
-        KeyBasedResponsesRetriever keyBasedRetriever = new KeyBasedResponsesRetriever();
+        //use factory of responses to return a Key based responses object.
+        //KeyBasedResponsesRetriever keyBasedRetriever = new KeyBasedResponsesRetriever();
+        KeyBasedResponsesRetriever keyBasedRetriever = ResponsesFactory.getKeyBasedResponsesRetriever();
         responseMap = keyBasedRetriever.getResponses();
-        DefaultResponsesRetriever defRetriever = new DefaultResponsesRetriever();
-        defaultResponses = defRetriever.getDefaultResponses();//new ArrayList<String>();
+        //use factory of responses to return a default responses object.
+        //DefaultResponsesRetriever defRetriever = new DefaultResponsesRetriever();
+        DefaultResponsesRetriever defRetriever = ResponsesFactory.getDefaultResponseRetriever();
+        defaultResponses = 
+        defRetriever.getDefaultResponses();//new ArrayList<String>();
         randomGenerator = new Random();
     }
 
